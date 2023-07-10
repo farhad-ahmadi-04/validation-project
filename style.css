@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(242, 236, 228);
+    font-family: Arial, Helvetica, sans-serif;
+}
+#container{
+    margin: 50px auto;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    width: fit-content;
+    border-radius: 10px;
+}
+#header{
+    margin: 0 auto;
+    background-color: rgb(128, 235, 235);
+    padding: 15px;
+    width: 220px;
+    border-radius: 10px 10px 0 0;
+}
+#form{
+    background-color: aqua;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 40px;
+    display: inline-block;
+    border-radius: 0 0 10px 10px;
+}
+.form-control{
+    position: relative;
+    padding-bottom: 19px;
+}
+.form-control label{
+display: block;
+text-align: end;
+padding: 8px;
+}
+.form-control input{
+    padding: 4px;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+.form-control input:focus{
+    outline: 0;
+    border-color: rgb(100, 17, 70);
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+.form-control.success input{
+    border-color: rgb(41, 196, 41);
+}
+.form-control.error input{
+    border-color: rgb(212, 35, 29);
+}
+.form-control.error small{
+visibility: visible;
+}
+.form-control small{
+    font-size: small;
+    color: red;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    visibility: hidden;
+}
