@@ -3,21 +3,35 @@ const userName = document.querySelector("#userName")
 const email = document.querySelector("#email")
 const password = document.querySelector("#password")
 const password2 = document.querySelector("#password2")
-const btn=document.querySelector('#btn')
+const btn = document.querySelector('#btn')
+const txt=document.querySelector('#txt')
+
 form.addEventListener('submit', (e) => {
     e.preventDefault()
 
     checkBtn()
 })
 
+
+
 function checkBtn() {
     const userNameValue = userName.value.trim()
     const emailValue = email.value.trim()
     const passwordValue = password.value.trim()
     const password2Value = password2.value.trim()
-    if (checking()&&userNameValue!=""&&emailValue!=""&&passwordValue!=""&&password2Value!="") {
-        btn.disabled=false
+    if (checking() && userNameValue != "" && emailValue != "" && passwordValue != "" && password2Value != "") {
+        btn.disabled = false
     }
+}
+document.addEventListener('DOMContentLoaded',typeWriter)
+let i = 0;
+function typeWriter() {
+    let text='To get something you never had, You have to do something you never did'
+  if (i < text.length) {
+    document.getElementById("txt").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typeWriter, 45);
+  }
 }
 
 function checking() {
@@ -27,9 +41,7 @@ function checking() {
     const password2Value = password2.value.trim()
 
 
-    if (condition) {
-        
-    }
+    
     if (userNameValue == "") {
         setError(userName, 'نام کاربری را وارد کنید')
     } else {

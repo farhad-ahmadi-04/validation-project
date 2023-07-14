@@ -6,15 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animatin.css">
 </head>
 <body>
     <div id="container">
-        <div id="header">
-            <h2>حساب کاربری</h2>
+        <div id="info">
+            <h3>Farhad Ahmadi</h3>
+            <p id="txt"></p>
         </div>
+       
         <form action="#" id="form" class="form">
+            <div id="header">
+                <h2>حساب کاربری</h2>
+            </div>
+            <hr>
             <div class="form-control">
-                <label for="userName">نام کاربری</label>
+                <label  for="userName">نام کاربری</label>
                 <input type="text" id="userName">
                 <small></small>
             </div>
@@ -29,11 +36,11 @@
                 <small></small>
             </div>
             <div class="form-control">
-                <label for="password2"> تکرار رمز عبور</label>
+                <label  for="password2"> تکرار رمز عبور</label>
                 <input type="password" id="password2">
                 <small></small>
             </div>
-            <button id="btn"  disabled>عضویت</button>
+            <button id="btn">عضویت</button>
         </form>
     </div>
     <script src="app.js"></script>
