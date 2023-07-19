@@ -1,103 +1,167 @@
 @font-face {
-    font-family: persion;
-    src: url(B-Mehr/B\ Mehr\ Bold_0.ttf);
+    font-family: pageFont;
+    src: url(font/Hunny\ Bummy.ttf);
+    font-weight: thin;
 }
-h3 , p {
-    font-size: 25px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+@font-face {
+    font-family: font2;
+    src: url(font2/Gothix.ttf);
 }
+
 body {
-    background-color: rgb(242, 236, 228);
-    font-family: persion;
-    background: linear-gradient(to right ,#121212 60%, #3e0a0a);
-    box-sizing: border-box;
-    color: rgba(190, 236, 97, 0.777);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+
+    background-color: rgb(15, 10, 10);
 }
 
-#container {
-    margin: 50px auto;
-    text-align: center;
-    width: 1000px;
-    min-width: 500px;
-    max-width: 1200px;
-    border-radius: 10px;
-}
-hr{
-    width: 0px;
-    animation: load 0.3s linear forwards;
+#boxes {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+
 }
 
-#form {
-    width: 500px;
+.container {
+    background-color: rgba(240, 248, 255, 0.95);
+    width: 400px;
+    box-sizing: content-box;
+    border-radius: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, #0000004d 0px 8px 16px -8px;
+}
+
+.container div {
+    width: 200px;
+}
+
+input {
+    width: 100%;
+}
+
+.container .image {
     margin: 10px auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    background: linear-gradient(to right ,#121212 60%, #3e0a0a);
+    width: 55%;
+}
+
+.container>.image>img {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%
+}
+
+/* ---------section 1 edit -------------*/
+#starter {
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-    /* display: flex; */
-    /* flex-wrap: wrap; */
-    /* align-items: center; */
-    /* justify-content: center; */
-    box-sizing: border-box;
-    padding: 30px;
-    /* display: inline-block; */
-    border-radius:10px;
+    justify-content: center;
+    align-items: center;
 }
 
-.form-control {
-    position: relative;
-    padding-bottom: 19px;
+/* image edit */
+.container #img1 {
+    height: 100%;
 }
 
-.form-control label {
+/*------- making form for section 1 ---------*/
+#starter>h3 {
+    font-size: 23px;
+}
+
+#starter>button {
+    background-color: rgb(15, 10, 10);
+    margin: 10px;
+    border-radius: 10px;
+    padding: 14px 84px;
+    transition: all 1s;
+    cursor: pointer;
+}
+#starter button:first-of-type{
+    border: none;
+}
+#starter button>a {
+    color: azure;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+#starter>button:last-of-type {
+    background-color: rgba(240, 248, 255, 0.95);
+}
+#starter>button:last-of-type:hover{
+    border: none;
+}
+#starter>button:last-of-type>a {
+    color: rgb(15, 10, 10);
+}
+
+#starter button:hover {
+    background: linear-gradient(to right, rgb(15, 10, 10) 58%, rgba(240, 248, 255, 0.95))
+}
+#starter button:last-of-type:hover a{
+    color: #ffff;
+}
+/* -----------end section1 edit---------- */
+#img2 {
+    width: 60%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    margin-bottom: 8px;
+}
+
+form .password small a{
     display: block;
     text-align: end;
-    padding: 8px;
-    animation: labelLoad 0.5s linear;
+    text-decoration: none;
+    color: rgb(15, 10, 10);
+    margin: 3px 10px 6px 0px;
 }
 
-.form-control input {
-    visibility: hidden;
-    padding: 4px;
-    border-radius: 3px;
+label {
+    display: block;
+    opacity: 0.8;
+    margin: 0px 0px 5px 10px;
+    color: black;
+    font-size: 13px;
+}
+
+form input {
+    padding: 6px 0px;
+    margin-bottom: 5px;
+    border-radius: 4px;
     outline: none;
     border: none;
-    animation: inputLoad 0.5s ease-in forwards;
-    animation-delay: 1s;
 }
 
-#btn {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-    font-family: persion;
-    padding: 10px 28px;
-    background: none;
-    color: rgb(104, 236, 97);
-    border-radius: 8px;
+form .btn>input {
+    padding: 14px;
+    background-color: rgb(15, 10, 10);
+    color: #ffff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 10px;
+    transition: all 1s;
 }
 
-.form-control input:focus {
-    outline: 0;
-    border-color: rgb(205, 18, 137);
-    border-radius: 2px;
-    transition: all 0.2s;
+form .btn>input:hover {
+    background: linear-gradient(to right, rgb(15, 10, 10) 58%, rgba(240, 248, 255, 0.95));
 }
 
-.form-control.success input {
-    border:1px solid rgb(41, 196, 41);
+h5 {
+    margin-top: 5px;
 }
 
-.error input {
-    border:1px solid rgb(212, 35, 29);
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;}
-
-.form-control.error small {
-    visibility: visible;
-}
-
-.form-control small {
-    font-size: small;
-    color: red;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    visibility: hidden;
+#createAccount>#img3 {
+    width: 75%;
 }
