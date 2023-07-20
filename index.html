@@ -6,37 +6,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>validaton</title>
+    <link rel="stylesheet" href="jsStyle.css">
     <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
     <div id="boxes">
+        <div>
+           
+        </div>
         <section class="container" id="starter">
             <div id="img1" class="image">
                 <img src="image/img3.jpg" alt="">
             </div>
             <h3>Best way to be programer!</h3>
-            <button><a href="#">Sign Up</a></button>
-            <button><a href="#">Sign In</a></button>
+            <button id="signUpBtn" class="signUp"><a href="#">Sign Up</a></button>
+            <button id="signInBtn"><a href="#">Sign In</a></button>
         </section>
         <section class="container" id="SignInPage">
             <div id="img2" class="image">
                 <img src="image/img2.jpg" alt="">
-                <form action="#">
+                <form action="#" id="signInForm">
                     <h2>Sign In</h2>
                     <div class="email">
                         <label for="email">Email Address</label>
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email">
+                        <small></small>
                     </div>
                     <div class="password">
                         <label for="password">password</label>
                         <input type="password" name="password" id="password">
+                        <small></small>
                         <small><a href="#">Forget password?</a></small>
                     </div>
                     <div class="btn" id="SignIn">
                         <input type="button" value="Sign In">
                     </div>
-                    <h5>I'm a new user. <a href="#">Sign Up</a></h5>
+                    <h5>I'm a new user. <a href="#" class="signUp signUpLink">Sign Up</a></h5>
                 </form>
             </div>
         </section>
@@ -44,28 +51,32 @@
             <div id="img3" class="image">
                 <img src="image/desktop-wallpaper-the-man-in-black-tie-on-the-1280x800-black-guy.jpg" alt="">
             </div>
-            <form action="#">
+            <form action="#" id="signUpForm">
                 <h2>Create Account</h2>
                 <div class="name">
                     <label for="fullName">Full Name</label>
                     <input type="text" name="fullName">
+                    <small></small>
                 </div>
                 <div class="number">
                     <label for="phoneNumber">Phone Number</label>
                     <input type="number" name="phoneNumber">
+                    <small></small>
                 </div>
                 <div class="email">
                     <label for="email">Email Address</label>
                     <input type="email" name="email">
+                    <small></small>
                 </div>
                 <div class="password">
                     <label for="password">Password</label>
                     <input type="password" name="password">
+                    <small></small>
                 </div>
                 <div class="btn">
-                    <input type="button" value="Sign Up" >
+                    <input type="button" id="inputBtn" value="Sign Up">
                 </div>
-                <h5>I'm already a member. <a href="#">Sign In</a></h5>
+                <h5>I'm already a member. <a href="#" class="sigIn signInLink">Sign In</a></h5>
             </form>
         </section>
     </div>

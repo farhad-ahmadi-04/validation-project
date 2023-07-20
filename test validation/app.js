@@ -4,7 +4,7 @@ const email = document.querySelector("#email")
 const password = document.querySelector("#password")
 const password2 = document.querySelector("#password2")
 const btn = document.querySelector('#btn')
-const txt=document.querySelector('#txt')
+const txt = document.querySelector('#txt')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -23,15 +23,16 @@ function checkBtn() {
         btn.disabled = false
     }
 }
-document.addEventListener('DOMContentLoaded',typeWriter)
+document.addEventListener('DOMContentLoaded', typeWriter)
 let i = 0;
+
 function typeWriter() {
-    let text='To get something you never had, You have to do something you never did'
-  if (i < text.length) {
-    document.getElementById("txt").innerHTML += text.charAt(i);
-    i++;
-    setTimeout(typeWriter, 45);
-  }
+    let text = 'To get something you never had, You have to do something you never did'
+    if (i < text.length) {
+        document.getElementById("txt").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 45);
+    }
 }
 
 function checking() {
@@ -40,8 +41,8 @@ function checking() {
     const passwordValue = password.value.trim()
     const password2Value = password2.value.trim()
 
+console.log(userName);
 
-    
     if (userNameValue == "") {
         setError(userName, 'نام کاربری را وارد کنید')
     } else {
