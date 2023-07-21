@@ -1,3 +1,11 @@
+// validation project
+
+// Contributor:  Frahad Ahmadi
+
+// githubLink:  'https://github.com/feri-punisher'
+// farhad.13ahmadi.83@gmail.com
+
+
 const boxes = document.querySelector("boxes")
 const signUpBtn = document.querySelector('#signUpBtn');
 const signInBtn = document.querySelector('#signInBtn');
@@ -121,6 +129,7 @@ function chekingSignUpPage() {
     }
 }
 
+// with this function we show and hide password in 2nd section
 const hideAndShowPasswordd = document.
     querySelector("#togglePasswordd")
     hideAndShowPasswordd.addEventListener("click", () => {
@@ -132,6 +141,7 @@ const hideAndShowPasswordd = document.
         }
     })
 
+    // with this function we show and hide password in 3rd section
     const hideAndShowPassword = document.
     querySelector("#togglePassword")
     hideAndShowPassword.addEventListener("click", () => {
@@ -142,16 +152,16 @@ const hideAndShowPasswordd = document.
         }
     })
    
-
-
-function error(input, massage) {
-    const errorMassge = input.parentElement
-    const small = errorMassge.querySelector('small')
-    small.innerText = massage
-    input.style = "border: 1px solid red"
-
-}
-
+// function for error messages
+    function error(input, massage) {
+        const errorMassge = input.parentElement
+        const small = errorMassge.querySelector('small')
+        small.innerText = massage
+        input.style = "border: 1px solid red"
+        
+    }
+    
+    // function for correct word
 function success(input) {
     const errorMassge = input.parentElement
     const small = errorMassge.querySelector('small');
@@ -181,19 +191,19 @@ function success(input) {
 //     }else{
 //         success(input)
 //     }
-//     // lowerCaseRull
+//     // lowerCaseRul
 //     if (!password.value.match(lowerCaseLetter)) {
 //         error(input,"use lowerCaseLetter too, Please")
 //     }else{
 //         success(input)
 //     }
-//     // number rull
+//     // number rul
 //     if (!password.value.match(NUMBER)) {
 //         error(input,"use NUMBER too, Please")
 //     }else{
 //         success(input)
 //     }
-//     // // symbol rull
+//     // // symbol rul
 //     // if (!password.value.match(symbol)) {
 //     //     error(input,"use symbols too, Please")
 //     // }else{
