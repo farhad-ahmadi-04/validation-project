@@ -34,7 +34,7 @@ body {
 }
 
 .container div {
-    width: 200px;
+    width: 180px;
 }
 
 input {
@@ -79,9 +79,11 @@ input {
     transition: all 1s;
     cursor: pointer;
 }
-#starter button:first-of-type{
+
+#starter button:first-of-type {
     border: none;
 }
+
 #starter button>a {
     color: azure;
     text-decoration: none;
@@ -91,9 +93,11 @@ input {
 #starter>button:last-of-type {
     background-color: rgba(240, 248, 255, 0.95);
 }
-#starter>button:last-of-type:hover{
+
+#starter>button:last-of-type:hover {
     border: none;
 }
+
 #starter>button:last-of-type>a {
     color: rgb(15, 10, 10);
 }
@@ -101,9 +105,11 @@ input {
 #starter button:hover {
     background: linear-gradient(to right, rgb(15, 10, 10) 58%, rgba(240, 248, 255, 0.95))
 }
-#starter button:last-of-type:hover a{
+
+#starter button:last-of-type:hover a {
     color: #ffff;
 }
+
 /* -----------end section1 edit---------- */
 #img2 {
     width: 60%;
@@ -116,10 +122,11 @@ form {
 }
 
 form div {
+    position: relative;
     margin-bottom: 8px;
 }
 
-form .password small a{
+form .password small a {
     display: block;
     text-align: end;
     text-decoration: none;
@@ -128,7 +135,7 @@ form .password small a{
 }
 
 label {
-    display: block;
+    display: inline-block;
     opacity: 0.8;
     margin: 0px 0px 5px 10px;
     color: black;
@@ -165,7 +172,14 @@ h5 {
 #createAccount>#img3 {
     width: 75%;
 }
-form div small{
-    margin-left: 10px;
+
+form div small {
+    /* margin-left: 8x; */
     color: rgba(255, 0, 0, 0.873);
+}
+
+form div i {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
 }

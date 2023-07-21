@@ -1,4 +1,4 @@
-const boxes=document.querySelector("boxes")
+const boxes = document.querySelector("boxes")
 const signUpBtn = document.querySelector('#signUpBtn');
 const signInBtn = document.querySelector('#signInBtn');
 const createAccount = document.querySelector('#createAccount');
@@ -34,38 +34,44 @@ function signInStyle() {
     SignInPage.style = "width:450px;transition:width 1s"
 }
 // -----------validation--------
+const passwordPettern = /([a-zA-Z0-9])/g;
+
 const signInForm = document.querySelector('#signInForm>div.btn>input')
 console.log(signInForm);
 const email = SignInPage.querySelector("div.email>input")
 const password = SignInPage.querySelector("div.password input");
-console.log(password);
+
 
 // click for checking sign in  form
 // -----function is for sign in page-------
 signInForm.addEventListener('click', chekingSignInPage)
 // checking function
-function chekingSignInPage() {
+function chekingSignInPage(event) {
     // value input
     const emailValue = email.value.trim();
     // vlue input password
     const passwordValue = password.value.trim();
     if (emailValue == "") {
         error(email, "Please write your email");
-    } else {
+    } else if (!emailValue.includes("@", ".", "gmail", "yahoo", "gmail.com", ".com")) {
+        error(email, "Please enter @gamil.com/@yahoo.com")
+    }else {
         success(email)
     }
     if (passwordValue == "") {
         error(password, "Please write your password");
+    } else if (passwordValue.length < 8) {
+        error(password, "less than 8 characters");
     } else {
         success(password)
     }
-
 }
 // -----function is for sign in page-------
 
 // -------function is for sign up page------
 const signUpFormBtn = document.querySelector('#signUpForm>div.btn>input')
 const fullName = createAccount.querySelector("div.name>input")
+
 const phoneNumber = createAccount.querySelector("div.number>input")
 const emailAddress = createAccount.querySelector("div.email>input")
 const createPassword = createAccount.querySelector("div.password>input")
@@ -83,36 +89,59 @@ function chekingSignUpPage() {
     const emailAddressValue = emailAddress.value.trim();
     // vlue input (new password)
     const createPasswordVlaue = createPassword.value.trim();
-    // condition for name
+    // ----------condition for name-----------------
     if (fullNameValue == "") {
-        error(fullName, "Please write your full name");
+        error(fullName, "Please write your name");
     } else {
         success(fullName)
     }
-        // condition for phone number
+    // ---------------condition for phone number---------------
     if (phoneNumberValue == "") {
-        error(phoneNumber, "Please write your number");
+        error(phoneNumber, "Please write yuor password");
+    } else if (phoneNumberValue.length < 11) {
+        error(phoneNumber, "Please enter the phone number correctly")
     } else {
         success(phoneNumber)
-    } 
-       // condition for email
+    }
+    // ----------------------condition for email----------------------
     if (emailAddressValue == "") {
         error(emailAddress, "Please write your email address");
+    } else if (!emailAddressValue.includes("@", ".", "gmail", "yahoo", "gmail.com", ".com")) {
+        error(emailAddress, "Please enter @gamil.com/@yahoo.com")
     } else {
         success(emailAddress)
     }
-        // condition for password
+    // --------------------condition for password-------------------------
     if (createPasswordVlaue == "") {
         error(createPassword, "Please write a password");
+    } else if (createPasswordVlaue.length < 8) {
+        error(createPassword, "Password must be at least 8 characters")
     } else {
         success(createPassword)
     }
-
 }
 
+const hideAndShowPasswordd = document.
+    querySelector("#togglePasswordd")
+    hideAndShowPasswordd.addEventListener("click", () => {
+        if (password.type === "password") { 
+            console.log("ok");
+            password.type="text"
+        }else if (password.type==="text"){
+            password.type="password"
+        }
+    })
 
-
-
+    const hideAndShowPassword = document.
+    querySelector("#togglePassword")
+    hideAndShowPassword.addEventListener("click", () => {
+        if (createPassword.type==="password") {
+            createPassword.type="text"
+        }else if (createPassword.type==="text"){
+            createPassword.type="password"
+        }
+    })
+   
 
 
 function error(input, massage) {
