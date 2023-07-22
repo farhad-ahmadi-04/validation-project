@@ -62,7 +62,7 @@ function chekingSignInPage(event) {
     if (emailValue == "") {
         error(email, "Please write your email");
     } else if (!emailValue.includes("@gmail.com", "@yahoo.com")) {
-        error(email, "Please enter @gamil.com/@yahoo.com")
+        error(email, "Please enter @gmail.com/@yahoo.com")
     }else {
         success(email)
     }
@@ -115,7 +115,7 @@ function chekingSignUpPage() {
     if (emailAddressValue == "") {
         error(emailAddress, "Please write your email address");
     } else if (!emailAddressValue.includes( "@yahoo.com", "@gmail.com")) {
-        error(emailAddress, "Please enter @gamil.com/@yahoo.com")
+        error(emailAddress, "Please enter @gmail.com/@yahoo.com")
     } else {
         success(emailAddress)
     }
