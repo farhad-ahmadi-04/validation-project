@@ -12,6 +12,6 @@
   >
   >dveloper & disgner: **me**
   >
-  >spicail thanks:   **Mehrdadj2005@gmail.com** , **[Mehrdad Jokari](https://github.com/mehrdadj2005)**
+  >specail thanks:   **Mehrdadj2005@gmail.com** , **[Mehrdad Jokari](https://github.com/mehrdadj2005)**
 ### library
   > **[box shadow](https://getcssscan.com/css-box-shadow-examples)**
