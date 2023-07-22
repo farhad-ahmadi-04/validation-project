@@ -10,7 +10,7 @@
   >
   >**[Page link](https://feri-punisher.github.io/validation-project/)**
   >
-  >dveloper & digner: **me**
+  >dveloper & disgner: **me**
   >
   >spicail thanks:   **Mehrdadj2005@gmail.com**
 ### library
