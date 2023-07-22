@@ -62,8 +62,8 @@ function chekingSignInPage(event) {
     if (emailValue == "") {
         error(email, "Please write your email");
     } else if (!emailValue.includes("@gmail.com", "@yahoo.com")) {
-        error(email, "Please enter @gmail.com/@yahoo.com")
-    }else {
+        error(email, "Please enter @gmail.com")
+    } else {
         success(email)
     }
     if (passwordValue == "") {
@@ -114,8 +114,8 @@ function chekingSignUpPage() {
     // ----------------------condition for email----------------------
     if (emailAddressValue == "") {
         error(emailAddress, "Please write your email address");
-    } else if (!emailAddressValue.includes( "@yahoo.com", "@gmail.com")) {
-        error(emailAddress, "Please enter @gmail.com/@yahoo.com")
+    } else if (!emailAddressValue.includes("@gmail.com", "@yahoo.com")) {
+        error(emailAddress, "Please enter @gmail.com")
     } else {
         success(emailAddress)
     }
@@ -131,36 +131,36 @@ function chekingSignUpPage() {
 
 // with this function we show and hide password in 2nd section
 const hideAndShowPasswordd = document.
-    querySelector("#togglePasswordd")
-    hideAndShowPasswordd.addEventListener("click", () => {
-        if (password.type === "password") { 
-            password.type="text"
-        }else if (password.type==="text"){
-            password.type="password"
-        }
-    })
-
-    // with this function we show and hide password in 3rd section
-    const hideAndShowPassword = document.
-    querySelector("#togglePassword")
-    hideAndShowPassword.addEventListener("click", () => {
-        if (createPassword.type==="password") {
-            createPassword.type="text"
-        }else if (createPassword.type==="text"){
-            createPassword.type="password"
-        }
-    })
-   
-// function for error messages
-    function error(input, massage) {
-        const errorMassge = input.parentElement
-        const small = errorMassge.querySelector('small')
-        small.innerText = massage
-        input.style = "border: 1px solid red"
-        
+querySelector("#togglePasswordd")
+hideAndShowPasswordd.addEventListener("click", () => {
+    if (password.type === "password") {
+        password.type = "text"
+    } else if (password.type === "text") {
+        password.type = "password"
     }
-    
-    // function for correct word
+})
+
+// with this function we show and hide password in 3rd section
+const hideAndShowPassword = document.
+querySelector("#togglePassword")
+hideAndShowPassword.addEventListener("click", () => {
+    if (createPassword.type === "password") {
+        createPassword.type = "text"
+    } else if (createPassword.type === "text") {
+        createPassword.type = "password"
+    }
+})
+
+// function for error messages
+function error(input, massage) {
+    const errorMassge = input.parentElement
+    const small = errorMassge.querySelector('small')
+    small.innerText = massage
+    input.style = "border: 1px solid red"
+
+}
+
+// function for correct word
 function success(input) {
     const errorMassge = input.parentElement
     const small = errorMassge.querySelector('small');
