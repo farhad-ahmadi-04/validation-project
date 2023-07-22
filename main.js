@@ -114,7 +114,7 @@ function chekingSignUpPage() {
     // ----------------------condition for email----------------------
     if (emailAddressValue == "") {
         error(emailAddress, "Please write your email address");
-    } else if (!emailAddressValue.includes("@", ".", "gmail", "yahoo", "gmail.com", ".com")) {
+    } else if (!emailAddressValue.includes( "@yahoo.com", "@gmail.com")) {
         error(emailAddress, "Please enter @gamil.com/@yahoo.com")
     } else {
         success(emailAddress)
@@ -134,7 +134,6 @@ const hideAndShowPasswordd = document.
     querySelector("#togglePasswordd")
     hideAndShowPasswordd.addEventListener("click", () => {
         if (password.type === "password") { 
-            console.log("ok");
             password.type="text"
         }else if (password.type==="text"){
             password.type="password"
