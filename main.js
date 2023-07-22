@@ -61,7 +61,7 @@ function chekingSignInPage(event) {
     const passwordValue = password.value.trim();
     if (emailValue == "") {
         error(email, "Please write your email");
-    } else if (!emailValue.includes("@", ".", "gmail", "yahoo", "gmail.com", ".com")) {
+    } else if (!emailValue.includes("@gmail.com", "@yahoo.com")) {
         error(email, "Please enter @gamil.com/@yahoo.com")
     }else {
         success(email)
