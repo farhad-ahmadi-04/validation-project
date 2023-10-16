@@ -42,10 +42,9 @@ function signInStyle() {
     SignInPage.style = "width:450px;transition:width 1s"
 }
 // -----------validation--------
-const passwordPettern = /([a-zA-Z0-9])/g;
+// const passwordPettern = /([a-zA-Z0-9])/g;
 
 const signInForm = document.querySelector('#signInForm>div.btn>input')
-console.log(signInForm);
 const email = SignInPage.querySelector("div.email>input")
 const password = SignInPage.querySelector("div.password input");
 
@@ -54,18 +53,20 @@ const password = SignInPage.querySelector("div.password input");
 // -----function is for sign in page-------
 signInForm.addEventListener('click', chekingSignInPage)
 // checking function
-function chekingSignInPage(event) {
+function chekingSignInPage() {
     // value input
     const emailValue = email.value.trim();
-    // vlue input password
+    // value input password
     const passwordValue = password.value.trim();
-    if (emailValue == "") {
+    if (emailValue == "" || emailValue.match( /^(\d+)@[\w.-]+$/ )) {
         error(email, "Please write your email");
     } else if (!emailValue.includes("@gmail.com", "@yahoo.com")) {
         error(email, "Please enter @gmail.com")
     } else {
         success(email)
     }
+
+
     if (passwordValue == "") {
         error(password, "Please write your password");
     } else if (passwordValue.length < 8) {
@@ -168,44 +169,3 @@ function success(input) {
     input.style = "border: 1px solid green"
 }
 
-
-
-
-//-----------next version----------------- 
-// add conditon for password:
-
-
-// function passwordRules(input) {
-//     // validate capital letters
-//     const UperCaseLetter =/[A-Z]/g
-//     // validate lowrCase letter
-//     const lowerCaseLetter = /[a-z]/g
-//     // validate number
-//     const NUMBER=/[0-9]/g
-//     // validate symbols
-//     // const symbol = ['-', '_', '.',';', '/','!', '?']
-//     // uperCaserull
-//     if (!password.value.match(UperCaseLetter)) {
-//         error(input,"use UperCaseLetter too, Please")
-//     }else{
-//         success(input)
-//     }
-//     // lowerCaseRul
-//     if (!password.value.match(lowerCaseLetter)) {
-//         error(input,"use lowerCaseLetter too, Please")
-//     }else{
-//         success(input)
-//     }
-//     // number rul
-//     if (!password.value.match(NUMBER)) {
-//         error(input,"use NUMBER too, Please")
-//     }else{
-//         success(input)
-//     }
-//     // // symbol rul
-//     // if (!password.value.match(symbol)) {
-//     //     error(input,"use symbols too, Please")
-//     // }else{
-//     //     success(input)
-//     // }
-// }
