@@ -18,10 +18,10 @@ function formSubmit(e) {
         password01 = inputPassword02.value.trim()
     // check email input
     validaiteEmail(email)
-    // check password input
-    validaitePassword(password)
     // check password2 input
     validaitePassword02(password, password01)
+    // check password input
+    validaitePassword(password)
 }
 
 // email validate
@@ -50,7 +50,7 @@ function validaitePassword(psd) {
 // parametr1 : password1 and password2(type of string)
 // output : if passwords be same output is seccess, if not output is error
 function validaitePassword02(psd, psd2) {
-    if (psd2 == "" || psd != psd2) {
+    if (psd2 == "" || psd !== psd2) {
         error(inputPassword02, "")
     } else {
         seccess(inputPassword02)
